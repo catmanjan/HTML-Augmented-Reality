@@ -75,31 +75,31 @@
     <script>
         var scene, camera, renderer, controls;
 
-		scene = new THREE.Scene();
-		camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
-		controls = new THREE.DeviceOrientationControls(camera);
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
+        controls = new THREE.DeviceOrientationControls(camera);
 
-		renderer = new THREE.WebGLRenderer({ alpha: true });
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		
-		var appleTexture = new THREE.TextureLoader().load('img/apple.png');
-		var appleMaterial = new THREE.SpriteMaterial({ map: appleTexture, color: 0xffffff });
-		apple = new THREE.Sprite(appleMaterial);
-		apple.position.x = 3;
-		apple.position.y = -1;
-		apple.position.z = -1;
-		scene.add(apple);
+        renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+        var appleTexture = new THREE.TextureLoader().load('img/apple.png');
+        var appleMaterial = new THREE.SpriteMaterial({ map: appleTexture, color: 0xffffff });
+        apple = new THREE.Sprite(appleMaterial);
+        apple.position.x = 3;
+        apple.position.y = -1;
+        apple.position.z = -1;
+        scene.add(apple);
 
-		var bananaTexture = new THREE.TextureLoader().load('img/banana.png');
-		var bananaMaterial = new THREE.SpriteMaterial({ map: bananaTexture, color: 0xffffff });
-		banana = new THREE.Sprite(bananaMaterial);
-		banana.position.x = 3;
-		banana.position.y = -1;
-		banana.position.z = 1;
-		scene.add(banana);
+        var bananaTexture = new THREE.TextureLoader().load('img/banana.png');
+        var bananaMaterial = new THREE.SpriteMaterial({ map: bananaTexture, color: 0xffffff });
+        banana = new THREE.Sprite(bananaMaterial);
+        banana.position.x = 3;
+        banana.position.y = -1;
+        banana.position.z = 1;
+        scene.add(banana);
 
-		document.getElementById('scene').appendChild(renderer.domElement);
-		
+        document.getElementById('scene').appendChild(renderer.domElement);
+
         var render = function () {
             requestAnimationFrame(render);
 
@@ -107,7 +107,7 @@
             renderer.render(scene, camera);
         };
 
-		render();
+        render();
     </script>
 </body>
 </html>
